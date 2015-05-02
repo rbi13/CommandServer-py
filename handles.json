@@ -1,0 +1,27 @@
+{
+	"handle_list":
+	[
+		{
+			"name":"cli echo",
+			"description":"Simple example of cli command handle",
+			"patterns":[
+				{
+					"pattern":"echo (?P<arg1>(\\w+\\s*)+)",
+					"cliCommand":"echo <arg1>"
+				}
+			]
+		},
+		{
+			"name":"crazyflie",
+			"description":"Commands for crazyflie quad-copter client",
+			"patterns":[
+				{
+					"pattern":"(set|change|switch)?\\s*(crazyflie)*(flight)*\\s*(configution|setup)?\\s*(?P<config>(\\w+\\s*))",
+					"function":"setFlightConfig"
+				}
+			],
+			"delegatePath":"crazyflie-clients-python.CrazyflieHandleDelegate.CrazyflieHandleDelegate",
+			"manPath":""
+		}
+	]
+}
