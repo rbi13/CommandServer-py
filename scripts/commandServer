@@ -14,7 +14,7 @@
 # sudo update-rc.d scriptname defaults
 
 # ENVIRONMENT VARIABLES
-export PROJECTS_DIR=/home/pi/projects
+export PROJECTS_DIR=/home/ron/dev/repos
 PY_PATH=$PROJECTS_DIR
 PY_PATH=$PY_PATH:$PROJECTS_DIR/PythonUtils
 PY_PATH=$PY_PATH:$PROJECTS_DIR/CommandServer-py
@@ -22,7 +22,7 @@ PY_PATH=$PY_PATH:$PROJECTS_DIR/crazyflie-clients-python
 export PYTHONPATH=$PY_PATH
 
 # change this to a $PATH
-DAEMON_PATH="/home/pi/projects/CommandServer-py"
+DAEMON_PATH="$PROJECTS_DIR/CommandServer-py"
 
 DAEMON="python CommandServer.py"
 DAEMONOPTS=""
