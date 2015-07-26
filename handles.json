@@ -11,6 +11,31 @@
 				}
 			]
 		},
+
+		{
+			"name":"voice echo",
+			"description":"speaks text passed in",
+			"patterns":[
+				{
+					"pattern":"say (?P<arg1>(\\w+\\s*)+)",
+					"cliCommand":"speech <arg1>"
+				}
+			]
+		},
+
+		{
+			"name":"robo-browser",
+			"description":"Remote control browser",
+			"patterns":[
+				{
+					"pattern":"open chrome",
+					"function":"openChrome"
+				}
+			],
+			"delegatePath":"robobrowser-handle.RoboBrowserHandle.RoboBrowserHandle",
+			"manPath":""
+		},
+
 		{
 			"name":"crazyflie",
 			"description":"Commands for crazyflie quad-copter client",
